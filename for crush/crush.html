@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Yes lang sapat na<3</title>
+    <style>
+
+body{
+    background: linear-gradient(to right, #3e6ec2, #8612a3);
+
+   color: white;
+}
+main{
+                top: 50%;
+                left: 50%;
+                transform: translate(-0%, 70%);
+                background: rgba(29, 75, 202, 0.5);
+                border-radius: 15px;
+                padding: 40px;
+                box-shadow: rgb(29, 4, 172) 1px 30px 30px 1px;
+                height: 250px;
+                width: 200px;
+}
+p{
+                text-transform: capitalize;
+                border: double;
+                border-radius: 5px;
+                background-color: rgb(15, 185, 228);
+                font-size: 20px;
+               
+                
+
+}
+.btn
+{
+                cursor: pointer;
+                margin: 4px 2px;
+                font-size: 35px;
+                background-color: rgb(53, 143, 196);
+                color: white;
+                border-radius: 10px;
+}
+
+    </style>
+
+
+</head>
+<body>
+    <center>
+            <main>
+            <p id="question"><span>Will you marry me?</span></p>
+            <br><br>
+            <button class="btn" id="y"><b>YES</b></button>
+            <button class="btn" id="n"><b>NO</b></button>
+        </main>
+    </div>
+</body>
+<script>
+    const noBtn = document.getElementById('n');
+    const yesBtn = document.getElementById('y');
+    const ques = document.getElementById('question');
+    let btn = document.getElementById('btn');
+        let position;
+        noBtn.addEventListener('mouseover',() =>{
+        let rand = Math.floor(Math.random() * (500 - 200) + 1);
+        let rand2 = Math.floor(Math.random() * (-300 - 100) + 1);
+        noBtn.style.transform = "translate("+rand+"px,"+rand2+"px)";
+        });
+    yesBtn.addEventListener("click",()=>{
+        ques.innerHTML = "Wahhhhhhhh Iloveyouu so much wifeyyyy&hearts;&hearts;"
+    })
+    
+</script>
+
+<br><br><br><br><br><br><br><br>
+<div>
+    <p1>Programmed by Javzs</p1>
+</div>
+
+</html>
