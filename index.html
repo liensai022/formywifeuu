@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <style>
+            .boldtable, .boldtable TD, .boldtable TH
+            {
+                font-family:'Courier New' ;
+                font-size: 15pt;
+                color:white;
+                background-color: rgb(34, 34, 90);
+                cursor: pointer;
+            }
+        
+            body{
+                background:linear-gradient(to right, #374d6d, #081f3a);
+                color: rgb(243, 243, 243);
+            }
+  
+            h2{
+                border-style:double;
+                border-radius: 20px;
+                width: 380px;
+                height: 50px;
+                background: linear-gradient(to right, #172846, #33557c);
+                padding-top: 1%;
+                font-size: 30px;
+                font-family: 'Courier New', Courier, monospace;
+            }
+           
+         
+            h1{
+                font-size:small;
+                font-family:cursive;
+                cursor: pointer;
+            }
+
+            h1:hover{
+                background-color: rgb(8, 4, 247);
+                padding: 5px;
+                display:table;  
+            }
+
+            main{
+                border-style: double;
+                border-radius: 10px;
+                width: 450px;
+                height: 500px;
+                background: linear-gradient(to right, #535151, #244468);
+                padding-top: 40px;
+                box-shadow: rgb(12, 12, 12) 0px 20px 30px -1px;
+            }
+            p1{
+                font-family: 'Courier New', Courier, monospace;
+                font-weight: 500;
+                font-size: 16px;
+            }
+            input[type="text"]{
+                color: black;
+                background: white;
+                border: 3px solid rgb(245, 244, 244);
+                padding: 5px;
+                font-size: 15px;
+                width: 50%;
+                size: 5px;
+            }
+            button{
+                    border-radius: 5px;
+                    height: 25px;
+                    width: 50px;
+                    font-size: 20px;
+                    font-family: 'Courier New', Courier, monospace;
+                    cursor: pointer;
+                }
+            button:hover{
+            background-color: rgb(166, 211, 212);
+        }
+   
+        div{
+                position:absolute;
+                top:65%;
+                left: 50%;
+                transform: translate(-50%, -70%);
+                background: rgba(112, 121, 138, 0.5);
+                border-radius: 15px;
+                padding: 40px;
+                box-shadow: rgb(13, 14, 17) 1px 30px 30px 1px;
+                
+            }    
+        </style>
+        
+         <center> 
+         <div>
+            <h2>   
+                SIMPLE CALCULATOR
+            </h2>
+            <br>
+            <main> 
+            <br>
+            <p1>FIRST NUMBER:</p1> <input type="text" id="y" placeholder="Enter Number"></input>
+           <br><br>
+           <p1>SECOND NUMBER:</p1> <input type="text" id="z" placeholder="Enter Number"></input>
+           <br><br><br>
+        
+            <button onclick="addition();">+</button>
+            <button onclick="subtraction();">-</button>
+            <button onclick="multiplication();">*</button><br><br>
+            <button onclick="erase();" style="width:80px">RESET</button> <br>  <br> 
+            <button onclick="myName();"style="width:123px">DEVELOPER</button><br><br>
+         
+           
+        
+          
+            
+            <script>
+                function addition()
+                {
+                    
+                    var y = document.getElementById("y")
+                    var z = document.getElementById("z")
+                    
+                           var result = Number(y.value) + Number(z.value);innerHTML = result;
+                           var title = "SUM";
+                           document.getElementById("t").innerHTML="<center>" + result +"<br>" + title;                              
+                }   
+           </script>
+
+           <script>    
+                function subtraction()
+                {
+                    
+                    var y = document.getElementById("y")
+                    var z = document.getElementById("z")
+                    
+                           var result = Number(y.value) - Number(z.value);innerHTML = result;
+                           var title = "DIFFERENCE";
+                           document.getElementById("t").innerHTML="<center>" + result +"<br>" + title;                              
+                }       
+                </script>
+        
+               <script>    
+                function multiplication()
+                {
+                    
+                    var y = document.getElementById("y")
+                    var z = document.getElementById("z")
+                    
+                           var result = Number(y.value) * Number(z.value);innerHTML = result;
+                           var title = "PRODUCT";
+                           document.getElementById("t").innerHTML="<center>" + result +"<br>" + title;                              
+                }          
+            </script>
+             <script>
+                function myName()
+                {
+                var dev = "JAYVIN ALCAYAGA";
+                var title= "developer";
+                document.getElementById("t").innerHTML="<center>" + "<b>" + dev + "<br>" + "<i>" + title;
+                }   
+           </script>
+
+            <script>
+                function erase()
+                {
+                    window.location.reload();
+                }
+            </script>
+            <br><br><br>
+
+            <table class="boldtable">
+                <tr>
+                    <td id="t">Answer Here</td>
+                </tr>
+            </table>
+            <br><br><br><br>
+            <h1>Programmed by: Jayvin Alcayaga</h1>
+        </main>
+    </div>
+    </body>
+</html>
